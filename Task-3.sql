@@ -1,0 +1,1 @@
+SELECT SUM((order_items.unit_price-products.price)*order_items.quantity) as Total_revenue,categories.name as Category_name FROM order_items JOIN categories ON order_items.category_ID=categories.category_ID JOIN products ON products.category_ID=categories.category_ID GROUP BY categories.category_ID ORDER BY categories.category_ID DESC 
